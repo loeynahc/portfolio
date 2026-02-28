@@ -1,0 +1,129 @@
+.crafts {
+  padding: 6rem 4rem;
+  background: var(--cream);
+}
+
+.sectionLabel {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.12;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+.desc {
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+  font-weight: 300;
+  line-height: 2;
+}
+.code {
+  font-size: 0.82em;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+/* ─── MOSAIC GRID ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+
+.item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  grid-column: span 4;
+}
+.item:nth-child(1)  { grid-column: span 5; grid-row: span 2; }
+.item:nth-child(2)  { grid-column: span 4; }
+.item:nth-child(3)  { grid-column: span 3; }
+.item:nth-child(4)  { grid-column: span 4; }
+.item:nth-child(5)  { grid-column: span 3; }
+.item:nth-child(6)  { grid-column: span 5; }
+
+.large { grid-row: span 2; }
+
+/* ─── PLACEHOLDER ─── */
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, var(--border), #ddd8d0);
+  transition: background 0.3s;
+}
+.item:hover .placeholder {
+  background: linear-gradient(135deg, #ddd8d0, #ccc6bc);
+}
+.placeholderEmoji { font-size: 2.25rem; }
+.placeholderLabel {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ─── PHOTO ─── */
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.item:hover .photo { transform: scale(1.04); }
+
+/* ─── OVERLAY ─── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 23, 20, 0);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem 1.1rem;
+  transition: background 0.3s;
+}
+.item:hover .overlay { background: rgba(26, 23, 20, 0.55); }
+
+.overlayTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: white;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.item:hover .overlayTitle { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  .crafts { padding: 4rem 1.5rem; }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 160px;
+  }
+  .item, .item:nth-child(n) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,19 @@
+.footer {
+  padding: 1.75rem 4rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: var(--cream);
+}
+
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}

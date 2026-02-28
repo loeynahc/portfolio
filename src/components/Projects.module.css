@@ -1,0 +1,99 @@
+.projects {
+  padding: 6rem 4rem;
+  background: var(--ink);
+}
+
+.sectionLabel {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.12;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+}
+.desc {
+  color: rgba(250, 248, 244, 0.45);
+  margin-bottom: 3rem;
+  max-width: 480px;
+  font-weight: 300;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.125rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  height: 100%;
+}
+.card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.18);
+  transform: translateY(-3px);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.cardIcon { font-size: 1.5rem; }
+.arrow { color: var(--accent); font-size: 1.1rem; }
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--cream);
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+}
+.cardDesc {
+  font-size: 0.875rem;
+  color: rgba(250,248,244,0.45);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex: 1;
+  font-weight: 300;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+.tag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  background: rgba(200, 98, 58, 0.15);
+  color: #df7f5e;
+  letter-spacing: 0.04em;
+}
+
+.githubLink {
+  font-size: 0.8rem;
+  color: rgba(250,248,244,0.35);
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-top: auto;
+  align-self: flex-start;
+}
+.githubLink:hover { color: var(--accent); }
+
+@media (max-width: 900px) {
+  .projects { padding: 4rem 1.5rem; }
+}
