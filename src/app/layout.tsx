@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import dynamic from 'next/dynamic'
+
+const Cursor = dynamic(() => import('@/components/Cursor/Cursor'), { ssr: false })
 
 export const metadata: Metadata = {
   title: 'Ami',
@@ -18,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Cursor />
+        {children}
+      </body>
     </html>
   )
 }

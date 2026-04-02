@@ -1,5 +1,5 @@
 import { projects } from '@/data/portfolio'
-import Reveal from './Reveal'
+import Reveal from '../Reveal'
 import styles from './Projects.module.css'
 
 export default function Projects() {

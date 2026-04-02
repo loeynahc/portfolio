@@ -1,5 +1,5 @@
 import { skills } from '@/data/portfolio'
-import Reveal from './Reveal'
+import Reveal from '../Reveal/Reveal'
 import styles from './Skills.module.css'
 
 export default function Skills() {

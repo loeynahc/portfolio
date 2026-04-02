@@ -1,0 +1,41 @@
+.wrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+    z-index: 0;
+    padding-right: 10rem;
+    padding-top: 50vh;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.4s;
+  }
+  
+  .character {
+    width: min(340px, 38vw);
+    height: auto;
+    animation: breathe 3s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-12px); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 900px) {
+    .wrapper {
+      position: relative;
+      justify-content: center;
+      padding-right: 0;
+      margin-top: 2rem;
+    }
+    .character {
+      width: min(220px, 60vw);
+    }
+  }

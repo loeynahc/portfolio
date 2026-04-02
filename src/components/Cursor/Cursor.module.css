@@ -1,0 +1,15 @@
+.dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: red;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  /* offset so the dot centre is at the cursor tip */
+  margin-left: -3px;
+  margin-top: -3px;
+  /* no transition = instant, feels snappy */
+}

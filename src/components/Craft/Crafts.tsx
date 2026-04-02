@@ -1,5 +1,5 @@
 import { crafts } from '@/data/portfolio'
-import Reveal from './Reveal'
+import Reveal from '../Reveal/Reveal'
 import styles from './Crafts.module.css'
 
 export default function Crafts() {

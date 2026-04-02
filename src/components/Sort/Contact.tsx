@@ -1,5 +1,5 @@
 import { personal } from '@/data/portfolio'
-import Reveal from './Reveal'
+import Reveal from '../Reveal/Reveal'
 import styles from './Contact.module.css'
 
 const links = [
